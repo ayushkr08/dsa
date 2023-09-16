@@ -18,7 +18,7 @@ public class prac2 {
     }
     static void bubble_sort(int arr[], int n){
         for(int i =n-1; i>=0;i--){
-            int didSwap = 0;
+            int didSwap = 0;  // taking a flag to check whether it is already sorted or not
             for(int j =0;j<=i-1;j++){
                 if(arr[j]>arr[j+1]){
                     int temp = arr[j+1];
