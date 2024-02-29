@@ -1,7 +1,12 @@
 public class subString {
     public static void main(String[] args) {
-        String str = "hi There world and people";
+        int num1 = 1280;
 
-        System.out.println(str.substring(6));
+        Integer num2 = num1;
+        Integer num3 = num1;
+
+        System.out.println(num1 == num2);
+        System.out.println(num2 == num3);
+
     }
 }
