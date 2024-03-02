@@ -1,3 +1,5 @@
+import java.util.concurrent.LinkedBlockingDeque;
+
 public class linked {
     private Node head;
     private Node tail;
@@ -46,8 +48,6 @@ public class linked {
         size++;
     }
 
-
-
     public void display() {
         Node temp = head;
         while(temp != null) {
@@ -57,7 +57,59 @@ public class linked {
         System.out.print("END");
     }
 
+    public int deleteInteger() {
+        int val = head.value;
+        head = head.next;
+        if(head == null) {
+            tail = null;
+        }
+        size--;
+        return val;
+    }
 
+    public int delete(int index) {
+        if(index == 0) {
+            return deleteInteger();
+        }
+        if(index == size-1){
+            return deleteLastElement();
+        }
+        Node prev = get(index-1);
+        int val = prev.next.value;
+        prev.next = prev.next.next;
+        return val;
+    }
+
+    public int deleteLastElement() {
+        if(size <= 1) {
+            return deleteInteger();
+        }
+
+        Node secondLast = get(size - 2);
+        int val = tail.value;
+        tail = secondLast;
+        tail.next = null;
+        return val;
+    }
+
+    public Node find(int value) {
+        Node node = head;
+        while(node != null){
+            if(node.value == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
+    public Node get(int index) {
+        Node node = head;
+        for(int i = 0;i < index;i++) {
+            node = node.next;
+        }
+        return node;
+    }
 
     private class Node{
         private int value;
