@@ -12,7 +12,6 @@ public class increasingArray {
             if (values[i] < values[i - 1]) {
                 answer += (values[i - 1] - values[i]);
                 values[i] = values[i - 1];
-
             }
         }
         System.out.println(answer);

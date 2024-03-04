@@ -7,7 +7,6 @@ public class setBits {
     }
     private static int SetBits(int n) {
         int count = 0;
-
 //        while (n > 0) {
 //            count++;
 //            n -= (n & -n);

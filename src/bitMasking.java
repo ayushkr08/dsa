@@ -5,6 +5,5 @@ public class bitMasking {
         System.out.println(n);
         n = 20;
         System.out.println(n);
-
     }
 }

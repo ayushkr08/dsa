@@ -2,8 +2,6 @@ public class majorityElements {
     public static void main(String[] args) {
         int[] nums = {2, 2, 1, 1, 1, 2, 2};
         System.out.println(majorityElem(nums));
-
-
     }
     public static int majorityElem(int[] nums) {
         int ans = nums[0];

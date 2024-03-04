@@ -5,7 +5,6 @@ public class overloading {
         int n = in.nextInt();
         System.out.println(isPrime(n));
     }
-
     static boolean isPrime(int n){
         if(n <= 1){
             return false;

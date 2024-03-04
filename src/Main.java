@@ -27,15 +27,28 @@ public class Main {
 //        System.out.println();
 //        list.find(3);
 
-        DLL list = new DLL();
+//        DLL list = new DLL();
+//
+//        list.insertFirst(2);
+//        list.insertFirst(3);
+//        list.insertFirst(2);
+//        list.insertFirst(3);
+//        list.insertFirst(8);
+//        list.insertFirst(17);
+//        list.insertLast(99);
+//
+//        list.insert(8,65);
+//
+//        list.display();
 
-        list.insertFirst(2);
-        list.insertFirst(3);
-        list.insertFirst(2);
-        list.insertFirst(3);
-        list.insertFirst(8);
-        list.insertFirst(17);
+        circularLL list = new circularLL();
+        list.insert(23);
+        list.insert(2);
+        list.insert(3);
+        list.insert(19);
+        list.insert(75);
         list.display();
+
 
 
 
