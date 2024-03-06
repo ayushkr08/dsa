@@ -47,6 +47,20 @@ public class linked {
         tail = node;
         size++;
     }
+    //insert using recursion
+    public void insertRec(int val, int index) {
+        head = insertRec(val, index, head);
+    }
+    private Node insertRec(int val, int index, Node node) {
+        if(index == 0) {
+            Node temp = new Node(val, node);
+            size++;
+            return temp;
+        }
+        node.next = insertRec(val, index-1, node.next);
+        return node;
+    }
+
 
     public void display() {
         Node temp = head;
@@ -121,5 +135,35 @@ public class linked {
             this.value = value;
             this.next = next;
         }
+    }
+
+    //questions
+    public void duplicates() {
+        Node node = head;
+
+        while(node.next != null) {
+            if(node.value == node.next.value) {
+                node.next = node.next.next;
+                size--;
+            } else {
+                node = node.next;
+            }
+        }
+        tail = node;
+        tail.next = null;
+    }
+
+    public static void main(String[] args) {
+        linked list = new linked();
+        list.insertLast(1);
+        list.insertLast(1);
+        list.insertLast(1);
+        list.insertLast(2);
+        list.insertLast(4);
+        list.insertLast(4);
+        list.display();
+        list.duplicates();
+        list.display();
+
     }
 }
