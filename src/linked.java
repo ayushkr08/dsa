@@ -1,5 +1,3 @@
-import java.util.concurrent.LinkedBlockingDeque;
-
 public class linked {
     private Node head;
     private Node tail;
@@ -57,7 +55,7 @@ public class linked {
             size++;
             return temp;
         }
-        node.next = insertRec(val, index-1, node.next);
+        node.next = insertRec(val, index-1, node.next); 
         return node;
     }
 
@@ -137,7 +135,7 @@ public class linked {
         }
     }
 
-    //questions
+    //leetcode questions
     public void duplicates() {
         Node node = head;
 
@@ -153,17 +151,51 @@ public class linked {
         tail.next = null;
     }
 
+    // merge 2 linked list
+
+    public static linked merge(linked first, linked second) {
+        Node f = first.head;
+        Node s = second.head;
+
+        linked ans = new linked();
+
+        while (f != null && s != null) {
+            if (f.value < s.value) {
+                ans.insertLast(f.value);
+                f = f.next;
+            } else {
+                ans.insertLast(s.value);
+                s = s.next;
+            }
+        }
+        while (f != null) {
+            ans.insertLast(f.value);
+            f = f.next;
+
+        }
+        while (s != null) {
+            ans.insertLast(s.value);
+            s = s.next;
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
-        linked list = new linked();
-        list.insertLast(1);
-        list.insertLast(1);
-        list.insertLast(1);
-        list.insertLast(2);
-        list.insertLast(4);
-        list.insertLast(4);
-        list.display();
-        list.duplicates();
-        list.display();
+        linked first = new linked();
+        linked second = new linked();
+
+        first.insertLast(1);
+        first.insertLast(3);
+        first.insertLast(5);
+
+        second.insertLast(1);
+        second.insertLast(2);
+        second.insertLast(9);
+        second.insertLast(14);
+
+        linked ans = linked.merge(first, second);
+        ans.display();
+
 
     }
 }
