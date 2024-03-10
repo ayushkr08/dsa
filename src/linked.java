@@ -180,6 +180,38 @@ public class linked {
         return ans;
     }
 
+
+    //Recursion reverse
+    private void reverse(Node node) {
+        if(node == tail) {
+            head = tail;
+            return;
+        }
+        reverse(node.next);
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
+
+    //in-place reversal of linked list
+    public void reverse() {
+        if(size < 2) {
+            return;
+        }
+        Node prev = null;
+        Node present = head;
+        Node nextNode = present.next;
+
+        while (present != null) {
+            present.next = prev;
+            present = nextNode;
+            if(nextNode != null) {
+                nextNode = nextNode.next;
+            }
+        }
+        head = prev;
+    }
+
     public static void main(String[] args) {
         linked first = new linked();
         linked second = new linked();
