@@ -75,8 +75,6 @@ public class BinaryTree {
         prettyDisplay(node.left, level + 1);
 
     }
-
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         BinaryTree tree = new BinaryTree();
