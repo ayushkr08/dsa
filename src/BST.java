@@ -12,19 +12,27 @@ public class BST {
         }
     }
     private Node root;
+    //constructor
     public BST() {
 
     }
+
     public int height(Node node) {
         if(node == null) {
             return -1;
         }
         return node.height;
     }
+
     public boolean isEmpty() {
         return root == null;
     }
-    public void display(Node node, String details) {
+
+    public void display() {
+        display(root, "Root Node: ");
+    }
+
+    private void display(Node node, String details) {
         if(node == null) {
             return;
         }
@@ -33,6 +41,7 @@ public class BST {
         display(node.left, "Left child of " + node.getValue() + " : ");
         display(node.right, "Right child of " + node.getValue() + " : ");
     }
+
     public void insert(int value) {
 
     }

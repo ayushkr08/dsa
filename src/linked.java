@@ -52,6 +52,7 @@ public class linked {
         head = insertRec(val, index, head);
     }
     private Node insertRec(int val, int index, Node node) {
+        //base condition
         if(index == 0) {
             Node temp = new Node(val, node);
             size++;
