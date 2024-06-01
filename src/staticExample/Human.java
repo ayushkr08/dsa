@@ -13,7 +13,7 @@ public class Human {
         System.out.println("hello world");
         // you cant use this keyword inside static method
         // this actually represents an object, and you are in static, static itself does not depend on the object(so how can we use this, which is dependent on the static)
-        System.out.println(this.age);
+        //System.out.println(this.age);
     }
 
 
