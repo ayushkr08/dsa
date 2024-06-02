@@ -2,13 +2,13 @@ package staticExample;
 
 public class Main {
     public static void main(String[] args) {
-//        Human kunal = new Human(22, "Kunal", 10000, false);
-//        Human ayush = new Human(23, "Ayush", 15000, true);
-//        Human arpit = new Human(23, "arpit", 15000, true);
+        Human kunal = new Human(22, "Kunal", 10000, false);
+        Human ayush = new Human(23, "Ayush", 15000, true);
+        Human arpit = new Human(23, "arpit", 15000, true);
 //
-//        System.out.println(ayush.population);
-//        System.out.println(kunal.population);
-//        System.out.println(arpit.population);
+        System.out.println(ayush.population);
+        System.out.println(kunal.population);
+        System.out.println(arpit.population);
 
         //greeting();
         // you cannot use this because it requires an instance but the function you are using

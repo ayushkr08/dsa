@@ -14,10 +14,16 @@ public class staticBlock {
 //        b = a * 5;
 //    }
     //static run only once when the 1st object is created i.e. when the class is loaded for the 1st time
+//    static {
+//        System.out.println("I am in the static block");
+//        b = a * 5;
+//}
     static {
-        System.out.println("I am in the static block");
-        b = a * 5;
+    System.out.println("I am in the static block");
+
+    b = a * 5;
 }
+
 
     public static void main(String[] args) {
         staticBlock obj = new staticBlock();

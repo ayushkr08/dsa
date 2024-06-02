@@ -7,11 +7,11 @@ public class Human {
     int salary;
     boolean married;
 
-     static long population;
+    static long population;
 
     static void message() {
         System.out.println("hello world");
-        // you cant use this keyword inside static method
+        // you cant use "this" keyword inside static method
         // this actually represents an object, and you are in static, static itself does not depend on the object(so how can we use this, which is dependent on the static)
         //System.out.println(this.age);
     }
