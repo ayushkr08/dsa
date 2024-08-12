@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.util.*;
 public class  oops {
     public static void main(String[] args) {
@@ -16,6 +17,9 @@ public class  oops {
         System.out.println(ayush.roll);
         System.out.println(ayush.name);
         System.out.println(ayush.marks);
+
+        Student random2 = new Student();
+        System.out.println(random2.name);
     }
 
 }
@@ -33,10 +37,10 @@ class Student{
     }
 
     void changeName(String newName){
-        name = newName;
+        this.name = newName;
     }
 
-    Student random = new Student();
+//    Student random = new Student();
 
 
     Student (Student other) { // constructor , we don't have to return or anything name is also not req.
@@ -47,7 +51,7 @@ class Student{
 
 
     Student() {
-        // this will how you call a contructor from another constructor
+        // this will how you call a constructor from another constructor
         // internally : new Student(13, "default person", 100)
         this(13, "default person", 100);
     }

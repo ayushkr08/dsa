@@ -1,27 +1,39 @@
 public class wrapperExample {
     public static void main(String[] args) {
-
-
-        Integer a = 10;  // this is primitive data type
-        Integer b = 20;
-        Integer temp = a;
-        a = b;
-        b = temp;
-
+        int a = 10;
+        int b = 20;
 //        Integer a = 10;
 //        Integer b = 20;
 
-//        swap(a,b);
+        swap(a, b);
+        System.out.println(a + " " + b);
 
-        System.out.println(a + " "+ b);
+
+//        final int BONUS = 2;
 
 
-        // using primitve as an object
+//        final A kunal = new A("Kunal kushwaha");
+//        kunal.name = "Other name";
+        // when a non primitive is final, you cannot reassign it
+//        kunal = new A(" new object");
+
+
     }
-//        static void swap (int a, int b){
-//            int temp = a;
-//            a = b;
-//            b = temp;
-//        }
+        static void swap (int a, int b){
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+
 }
+
+//class A {
+//    final int num = 10;
+//    String name;
+//
+//    public A(String name) {
+//        this.name = name;
+//    }
+//}
 
